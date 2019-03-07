@@ -1,0 +1,25 @@
+{
+    "testing": {
+        "laiyin": {
+            "username": "gene",
+            "host": "10.151.7.2",
+            "password": "bUsaSa37P&f$",
+            "port": 22
+        },
+        "gitlab": {
+            "username": "gene",
+            "host": "10.151.7.4",
+            "password": "bUsaSa37P&f$",
+            "port": 22
+        }
+    },
+    "staging": {
+        "staging": {
+            "username": "luan_xuechao",
+            "host": "10.151.6.110",
+            "password": "!wofAhhiV$gl1R",
+            "port": 60022
+        }
+    },
+    "production": {}
+}

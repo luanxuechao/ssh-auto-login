@@ -1,0 +1,18 @@
+{
+    "testing": {
+        "test1": {
+            "username": "root",
+            "host": "192.168.0.1",
+            "password": "xxxxx",
+            "port": 22
+        }
+    },
+    "testing2": {
+        "test2": {
+            "username": "root",
+            "host": "192.168.0.2",
+            "password": "1111",
+            "port": 22
+        }
+    }
+}
