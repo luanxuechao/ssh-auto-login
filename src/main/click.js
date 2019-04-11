@@ -26,15 +26,17 @@ module.exports = {
   },
   connect: function (menuItem) {
     let conf = JSON.parse(fs.readFileSync(confPath, 'utf8'))
-    let username, host, password, port
+    let username, host, password, port, secretPath
     username = conf[menuItem.sublabel][menuItem.label]['username']
     host = conf[menuItem.sublabel][menuItem.label]['host']
     password = conf[menuItem.sublabel][menuItem.label]['password']
     port = conf[menuItem.sublabel][menuItem.label]['port']
+    secretPath = conf[menuItem.sublabel][menuItem.label]['secretPath']
     shell.chmod('+x', shellPath)
     shell.sed('-i', /set sshHost.*/, `set sshHost "${username}@${host}"`, shellPath)
     shell.sed('-i', /set password.*/, `set password "${password}"`, shellPath)
     shell.sed('-i', /set port.*/, `set port  ${port}`, shellPath)
+    shell.sed('-i', /set secretPath.*/, `set secretPath  ${secretPath}`, shellPath)
     module.exports.openTab('sh -c ' + shellPath)
   },
 
