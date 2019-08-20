@@ -30,6 +30,10 @@ module.exports = {
     username = conf[menuItem.sublabel][menuItem.label]['username']
     host = conf[menuItem.sublabel][menuItem.label]['host']
     password = conf[menuItem.sublabel][menuItem.label]['password']
+    // 修复password 包含$ 出错
+    if (password.indexOf('$') > -1) {
+      password = password.replace(/\$/g, '\\$')
+    }
     port = conf[menuItem.sublabel][menuItem.label]['port']
     secretPath = conf[menuItem.sublabel][menuItem.label]['secretPath']
     shell.chmod('+x', shellPath)
